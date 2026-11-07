@@ -20,6 +20,7 @@
     <nav aria-label="Main">
       <a href="#about">About</a>
       <a href="#music">Music</a>
+      <a href="#photos">Photos</a>
       <a href="#gigs">Gigs</a>
       <a href="#contact">Contact</a>
       <a class="icon-link" href="https://www.instagram.com/finbardoyle/" target="_blank" rel="noopener" aria-label="Finbar Doyle on Instagram">
@@ -44,8 +45,16 @@
 
     <section id="about" class="section">
       <h2>About</h2>
+      <div class="about">
+      <figure class="portrait">
+        <!-- Drop Finbar's photo in as assets/finbar.jpg and it shows up here -->
+        <img src="assets/finbar.jpg" alt="Finbar Doyle with his guitar" onerror="this.parentNode.classList.add('empty'); this.remove();">
+      </figure>
+      <div>
       <p>From Kildare and now based in Boston, Finbar Doyle is a singer and guitarist who plays pubs, festivals and charity nights on both sides of the Atlantic, from Lisdoonvarna to Providence.</p>
       <blockquote class="motto">&ldquo;It doesn&rsquo;t matter what they do, it matters what you do. Be kind, be you.&rdquo;</blockquote>
+      </div>
+      </div>
       <!-- TODO: expand with a longer bio / press quote -->
     </section>
 
@@ -53,6 +62,24 @@
       <h2>Music</h2>
       <!-- TODO: add Spotify / Bandcamp / YouTube embeds or links -->
       <p class="placeholder">Releases and streaming links coming soon.</p>
+    </section>
+
+    <section id="photos" class="section">
+      <h2>Photos</h2>
+      <!--
+        To add a photo: put the file in assets/photos/ and add a line like this,
+        replacing one of the empty tiles below:
+        <a class="photo" href="assets/photos/doolin-2026.jpg"><img src="assets/photos/doolin-2026.jpg" alt="Finbar on stage at Doolin Motorcycle Fest" loading="lazy"></a>
+      -->
+      <div class="gallery">
+        <div class="photo empty" aria-hidden="true"></div>
+        <div class="photo empty" aria-hidden="true"></div>
+        <div class="photo empty" aria-hidden="true"></div>
+        <div class="photo empty" aria-hidden="true"></div>
+        <div class="photo empty" aria-hidden="true"></div>
+        <div class="photo empty" aria-hidden="true"></div>
+      </div>
+      <p class="placeholder">Photos coming soon.</p>
     </section>
 
     <section id="gigs" class="section">
@@ -105,6 +132,13 @@
     <p class="tagline">Ride on Fin &#x2618;</p>
     <p>&copy; <span id="year">2026</span> Finbar Doyle</p>
   </footer>
+  <dialog class="lightbox" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev" aria-label="Previous photo">&lsaquo;</button>
+    <img alt="">
+    <button class="lb-next" aria-label="Next photo">&rsaquo;</button>
+  </dialog>
+  <script src="gallery.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
